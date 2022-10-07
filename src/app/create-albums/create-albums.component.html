@@ -1,0 +1,14 @@
+<h2>Create Album</h2>
+<!--input type="file" id="upload" (change)="uploadImage($event)" accept="image/*" hidden /-->
+<div style = "width: 500px; margin: auto;">
+<div class="form-group">
+    <label for="exampleInputEmail1">Album Name</label>
+    <input type="text" class="form-control" [(ngModel)] = "albumTitle" placeholder="Enter Album Name">
+<div class="form-group">
+    <label>Cover Photo</label>
+    <input type="file" class="form-control-file" [disabled]="!albumTitle" 
+    (change)="createAlbum($event)">  
+</div>
+</div>
+</div>
+<!--)-->
